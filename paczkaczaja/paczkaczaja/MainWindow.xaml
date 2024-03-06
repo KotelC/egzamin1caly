@@ -1,0 +1,34 @@
+﻿<Window x:Class="paczkaczaja.MainWindow"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Nadaj Przesyłkę" Width="782" Height="600">
+    <Grid Margin="10,10,10,0" Height="607" VerticalAlignment="Top">
+        <GroupBox Header="Rodzaj przesyłki" Margin="0,10,655,511">
+            <StackPanel Height="145">
+                <RadioButton Content="Pocztówka" IsChecked="True" Name="PocztowkaRadioButton" />
+                <RadioButton Content="List" Name="ListRadioButton" />
+                <RadioButton Content="Paczka" x:Name="PaczkaRadioButton" Height="17" />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Dane adresowe" Margin="156,10,26,424">
+            <StackPanel Height="149" HorizontalAlignment="Left" Width="290">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Ulica z numerem" Width="120" />
+                    <TextBox x:Name="UlicaTextBox" Width="150" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Kod pocztowy" Width="120" />
+                    <TextBox Name="KodPocztowyTextBox" Width="150" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Miasto" Width="120" />
+                    <TextBox x:Name="MiastoTextBox" Width="150" />
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <Button Content="Sprawdź Cenę" Click="SprawdzCeneButton_Click" Margin="9,129,632,438" />
+        <Label Content="Cena: " FontWeight="Bold" FontSize="16" Margin="10,181,597,342" Name ="CenaLabel" />
+        <Button Content="Zatwierdź" Click="ZatwierdzButton_Click" Margin="0,264,176,295" />
+        <Image x:Name="Obraz" Margin="174,174,394,361" />
+    </Grid>
+</Window>
